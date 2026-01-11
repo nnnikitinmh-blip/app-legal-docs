@@ -1,0 +1,208 @@
+:root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --border: #262626;
+    --text: #fafafa;
+    --text-muted: #a1a1aa;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Legal document styles */
+.legal-doc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.legal-doc h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.legal-doc .app-name {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.legal-doc .effective-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.legal-doc h2 {
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem 0;
+    color: var(--text);
+}
+
+.legal-doc h3 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.75rem 0;
+    color: var(--text);
+}
+
+.legal-doc p {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.legal-doc ul, .legal-doc ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+.legal-doc li {
+    margin-bottom: 0.5rem;
+}
+
+.legal-doc a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.legal-doc a:hover {
+    text-decoration: underline;
+}
+
+.legal-doc .highlight {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 3px solid var(--accent);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* App list on index page */
+.app-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.app-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.app-card:hover {
+    border-color: var(--accent);
+}
+
+.app-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.app-card .bundle-id {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: monospace;
+    margin-bottom: 1rem;
+}
+
+.app-card .links {
+    display: flex;
+    gap: 1rem;
+}
+
+.app-card .links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.app-card .links a:hover {
+    text-decoration: underline;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 3rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer .contact {
+    margin-top: 0.5rem;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .legal-doc {
+        padding: 1.5rem;
+    }
+
+    .legal-doc h1 {
+        font-size: 1.5rem;
+    }
+}
